@@ -11,7 +11,13 @@ const App: React.FC = () => {
         Switch to {theme === "light" ? "dark" : "light"} mode
       </button>
       <div style={{ marginTop: "20px" }}>
-        Demo by <a href="https://twitter.com/nas5w">Nick Scialli</a>
+        Demo by{" "}
+        <a
+          style={{ color: theme === "light" ? "blue" : "#CCC" }}
+          href="https://twitter.com/nas5w"
+        >
+          Nick Scialli
+        </a>
       </div>
     </div>
   );
