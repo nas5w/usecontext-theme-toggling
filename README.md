@@ -20,7 +20,7 @@ Within the `ThemeProvider` component, we maintain our `theme` state using the `u
 
 For simplicity, we simple set the document body's `color` and `backgroundColor` styles based on whether the `theme` state is currently light or dark. Finally, we export our `ThemeContext` `Provider` with value set to and object with `theme` and `toggleTheme` properties. We then render `children` within our `ThemeContext.Provider` component.
 
-```typescript
+```javascript
 import React, { useState } from "react";
 typescript;
 type Theme = "light" | "dark";
@@ -54,7 +54,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
 
 In our `index` file, we simply wrap the entire app in our new `ThemeProvider` component. Of course we don't _need_ to do this at the app level in real projects, we just need to make sure that any components that need `theme` or `toggleTheme` are within the child tree of our provider.
 
-```typescript
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -72,7 +72,7 @@ ReactDOM.render(
 
 In the `App` component, we use the `useContext` hook to gain access to our `theme` string and `toggleTheme` function. We create a simple button that can toggle the theme and only use `theme` to determine what we show the user: "Switch to dark mode" or "Switch to light mode"
 
-```typescript
+```javascript
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeProvider";
 
