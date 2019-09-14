@@ -22,7 +22,7 @@ For simplicity, we simple set the document body's `color` and `backgroundColor` 
 
 ```javascript
 import React, { useState } from "react";
-typescript;
+
 type Theme = "light" | "dark";
 type ThemeContext = { theme: Theme; toggleTheme: () => void };
 
