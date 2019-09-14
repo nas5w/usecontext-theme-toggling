@@ -4,6 +4,12 @@ This project shows one method to use React's `useContext` and `useState` hooks t
 
 This project uses Typescript, but the same functionality can be achieved in javascript by removing the types.
 
+## Demo
+
+You can see a working version of this simple app on Netlify here:
+
+**[Demo site](https://usecontext-theme-demo.netlify.com/)**
+
 ## ThemeProvider.tsx
 
 In our `ThemeProvider` component, we define our `Theme` as being either light or dark and we define our ThemeContext as being an object with two properties: `theme` and `toggleTheme` (the theme and ability to toggle the theme will be made available to other components via the `useContext` hook).
@@ -64,7 +70,7 @@ ReactDOM.render(
 
 ## App.tsx
 
-In the `App` component
+In the `App` component, we use the `useContext` hook to gain access to our `theme` string and `toggleTheme` function. We create a simple button that can toggle the theme and only use `theme` to determine what we show the user: "Switch to dark mode" or "Switch to light mode"
 
 ```typescript
 import React, { useContext } from "react";
@@ -85,7 +91,3 @@ const App: React.FC = () => {
 
 export default App;
 ```
-
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
